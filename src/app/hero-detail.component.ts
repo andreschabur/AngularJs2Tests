@@ -10,16 +10,8 @@ import { HeroService } from './hero.service';
 
 @Component({
     selector: 'hero-detail',
-  /*template:
-    '<div *ngIf="hero">'+
-        '<h2>Detalles de {{hero.nombre}}!</h2>'+
-	'<div><label>codigo: </label>{{hero.codigo}}</div>'+
-	'<div>'+
-	    '<label>nombre: </label>'+
-	    '<input [(ngModel)]="hero.nombre" placeholder="nombre"/>'+
-	'</div>'+
-    '</div>'*/
     templateUrl: './hero-detail.component.html',
+    styleUrls: [ './hero-detail.component.css' ]
   
 })
 
@@ -35,7 +27,7 @@ export class HeroDetailComponent implements OnInit {
     ngOnInit(): void {
         this.route.paramMap
             .switchMap((params:ParamMap) => 
-            this.heroService.getHero(+params.get('id')))
+            this.heroService.getHero(+params.get('codigo')))
             .subscribe(hero => this.hero = hero);
     }
 

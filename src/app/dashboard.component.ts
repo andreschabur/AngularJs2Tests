@@ -7,6 +7,7 @@ import { HeroService } from './hero.service';
     selector: 'my-dashboard',
     //template: '<h3>Mi Mesa de uso, Dashbord</h3>visualizando despues de dar cli en dbrd',
     templateUrl: './dashboard.component.html',
+    styleUrls: [ './dashboard.component.css' ]
 })
 
 export class DashboardComponent implements OnInit {
