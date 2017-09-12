@@ -1,0 +1,64 @@
+<h1>{{title}}</h1>
+
+
+
+ <!--
+ 1-Mostrar un hero quemado
+ <h2>Detailles de {{herox.nombre}}!! Quemao</h2>
+  <div><label>codigox: </label>{{herox.codigo}}</div>
+  <div><label>ver nombrex: </label>{{herox.nombre}}</div>
+<div>
+  <label>editar nombrex: </label>
+  <input [(ngModel)]="herox.nombre" placeholder="nombre">
+</div>
+-->
+
+<!--
+2- Mostrar hero seleccionado
+<h2>Mys Heroinos</h2>
+<ul class="heroes">
+<li *ngFor="let hero of heroes" 
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(hero)">
+  <span class="badge">{{hero.codigo}}</span> {{hero.nombre}}
+</li>
+</ul>
+
+
+<div *ngIf="selectedHero">
+	<h2>Detalles de {{selectedHero.nombre}}!</h2>
+	<div><label>codigo: </label>{{selectedHero.codigo}}</div>
+	<div>
+	    <label>nombre: </label>
+	    <input [(ngModel)]="selectedHero.nombre" placeholder="nombre"/>
+	</div>
+</div>-->
+
+
+<!-- 3 -Mostrando con directiva de input y clase que tansporta los datos de hero 
+El if paso a heroDetail
+<h2>Mys Hoppers</h2>
+<ul class="heroes">
+<li *ngFor="let hero of heroes" 
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(hero)">
+  <span class="badge">{{hero.codigo}}</span> {{hero.nombre}}
+</li>
+</ul>
+<hero-detail [hero] = "selectedHero"><hero-detail>-->
+
+<!-- 4 el for pasa a my-heroes 
+<h2>Mys Heroinos</h2>
+<my-heroes>-->
+
+<!-- 5 Ahora se hace utilizando rutas en camino a utilizar un dash board
+<a routerLink="/heroes">Heroes</a>
+<router-outlet></router-outlet>-->
+
+<!-- 6 -->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>    
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+ 

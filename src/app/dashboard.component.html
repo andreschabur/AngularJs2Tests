@@ -1,0 +1,8 @@
+<h3>Top Artistas Heroes</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.codigo]" class=col-1-4>
+        <div class="module hero">
+            <h4>{{hero.nombre}}</h4>
+        </div>
+    </a>    
+</div>
