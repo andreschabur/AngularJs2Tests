@@ -1,3 +1,4 @@
+soy hero detail el hero esta vacio {{hero.nombre}}
 <div *ngIf="hero">
     <h2>Detalles de {{hero.nombre}}!</h2>
     <div>
@@ -7,4 +8,5 @@
         <input [(ngModel)]="hero.nombre" placeholder="nombre" />
     </div>
     <button (click)="goBack()">Regresar</button>
+    <button (click)="save()">Guardar</button>
 </div>
